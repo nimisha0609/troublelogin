@@ -1,69 +1,100 @@
-# React + TypeScript + Vite
+# EverBank Login App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **React + TypeScript + Tailwind CSS** project for an online banking login flow, built with **Vite**.  
+The project follows a multi-step flow for login, forgot password, OTP verification, and reset password.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 🔑 **Login Page** with Remember Me
+- ❓ **Trouble Logging In** (Forgot User ID / Forgot Password options)
+- 🔒 **Forgot Password Page** with user details validation
+- 📲 **Verify Identity** via SMS/Call OTP flow
+- 🔐 **OTP Verification** with clean UI
+- 🔄 **Reset Password Page**
+- 📱 Fully responsive (desktop + mobile)
+- 🎨 Styled with TailwindCSS and customizable theme
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 📂 Project Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+troublelogin/
+├── client/               # Frontend code
+│   ├── src/
+│   │   ├── assets/       # Images & logos
+│   │   ├── components/   # Shared UI components (Layout, Header, Footer)
+│   │   ├── pages/        # Login, ForgotPassword, OTP, ResetPassword, etc.
+│   │   ├── App.tsx       # App entry with Router
+│   │   └── main.tsx      # React DOM root
+│   ├── index.html
+│   ├── package.json
+│   └── tailwind.config.ts
+└── README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Installation & Setup
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 1. Clone the repo
+
+```bash
+
+git clone https://github.com/nimisha0609/troublelogin.git
+cd troublelogin/client
 ```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start development server
+
+```bash
+npm run dev
+```
+
+The app will be running at:  
+👉 `http://localhost:5173`
+
+---
+
+## 🛠️ Tech Stack
+
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **Vite**
+- **React Router DOM**
+
+---
+
+## 🔧 Customization
+
+- Replace the logo in `src/assets/logo.png`
+- API endpoints can be configured later in `.env`
+
+---
+
+## 📦 Build for Production
+
+```bash
+npm run build
+```
+
+Serve locally:
+
+```bash
+npm run preview
+```
+
+---
+
+## 👨‍💻 Author
+
+Built with ❤️ by **Nimmy Sunny**.
